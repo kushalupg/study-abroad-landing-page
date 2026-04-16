@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Abroad Agency - Campus Abroad Mauritius</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f4f6f9;
+    }
+
+    header {
+      background: #0b3d91;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #072c66;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background: #0b3d91;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1') no-repeat center center/cover;
+      height: 350px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #0b3d91;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #06234f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0b3d91;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Campus Abroad Mauritius</h1>
+    <p>Your Gateway to Global Education</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('services')">Services</a>
+    <a href="#" onclick="showPage('countries')">Countries</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="home">
+
+    <div class="hero">
+      <h1>Study Abroad Made Easy</h1>
+    </div>
+
+    <section>
+      <div class="card">
+        <h2>Welcome</h2>
+        <p>
+          We help students from Mauritius apply to top universities worldwide including Canada, UK,
+          Australia, Netherlands, Germany, France, Spain, China, and more.
+        </p>
+        <a class="btn" href="#" onclick="showPage('services')">Explore Services</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- SERVICES PAGE -->
+  <div id="services" class="hidden">
+    <section>
+      <h2>Our Services</h2>
+
+      <div class="card">
+        <h3>University Applications</h3>
+        <p>We assist you from application to admission.</p>
+      </div>
+
+      <div class="card">
+        <h3>Visa Guidance</h3>
+        <p>Complete support for student visa applications.</p>
+      </div>
+
+      <div class="card">
+        <h3>Career Counseling</h3>
+        <p>Choose the right course and country for your future.</p>
+      </div>
+
+      <a class="btn" href="#" onclick="showPage('contact')">Contact Us</a>
+    </section>
+  </div>
+
+  <!-- COUNTRIES PAGE -->
+  <div id="countries" class="hidden">
+    <section>
+      <h2>Study Destinations</h2>
+
+      <div class="card">
+        <p>🇨🇦 Canada</p>
+        <p>🇬🇧 United Kingdom</p>
+        <p>🇦🇺 Australia</p>
+        <p>🇳🇱 Netherlands</p>
+        <p>🇩🇪 Germany</p>
+        <p>🇫🇷 France</p>
+        <p>🇪🇸 Spain</p>
+        <p>🇨🇳 China</p>
+      </div>
+
+      <a class="btn" href="#" onclick="showPage('contact')">Apply Now</a>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="hidden">
+    <section>
+      <h2>Contact Us</h2>
+
+      <div class="card">
+        <p>Email: info@campusabroad.mu</p>
+        <p>Phone: +230 XXXX XXXX</p>
+
+        <form>
+          <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; margin-top:10px;">
+          <input type="email" placeholder="Your Email" required style="width:100%; padding:10px; margin-top:10px;">
+          <textarea placeholder="Your Message" required style="width:100%; padding:10px; margin-top:10px;"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Campus Abroad Mauritius. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = ["home", "services", "countries", "contact"];
+
+      pages.forEach(id => {
+        document.getElementById(id).classList.add("hidden");
+      });
+
+      document.getElementById(pageId).classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
